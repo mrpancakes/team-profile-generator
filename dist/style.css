@@ -1,0 +1,19 @@
+body {
+    margin: auto;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 100px;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.card {
+    margin: 20px;
+}
