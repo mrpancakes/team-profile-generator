@@ -16,4 +16,5 @@ header {
 
 .card {
     margin: 20px;
+    box-shadow: 0 10px 16px 0 rgb(179, 179, 179), 0 6px 2px 0 rgb(0 0 0 / 19%);
 }
