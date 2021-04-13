@@ -142,9 +142,6 @@ function additionalTeamMember() {
                 case "No Thanks, all done!":
                     buildTeam();
                     console.log("Your team has been created! Navigate to ./dist/index.html to see the result.")
-                    console.log(team[0].name);
-                    console.log(team[0]);
-
                     break;
             }
         });
@@ -165,21 +162,15 @@ function generateHtml() {
 
             switch (role) {
                 case 'Manager':
-                    thirdItem = 'Manager'
+                    thirdItem = `Office Number: ${team[i].officeNumber}`
                     break;
                 case 'Engineer':
-                    thirdItem = 'Engineer'
+                    thirdItem = `GitHub: <a href="https://github.com/${team[i].github}" target="_blank">${team[i].github}</a>`
                     break;
                 case 'Intern':
-                    thirdItem = 'Intern'
+                    thirdItem = `School: ${team[i].school}`
                     break;
             };
-
-            // if (role === 'Manager') {
-            //     thirdItem = 'YEAH IT WORKED'
-            // } else {
-            //     thirdItem = 'Kinda worked?'
-            // };
 
             let newCard = `<div class="card" style="width: 18rem;">
            <div class="card-body bg-primary text-white">
@@ -187,8 +178,10 @@ function generateHtml() {
                <h6 class="card-text">${role}</h6>
            </div>
            <ul class="list-group list-group-flush">
-               <li class="list-group-item">${team[i].id}</li>
-               <li class="list-group-item">${team[i].email}</li>
+               <li class="list-group-item">ID: ${team[i].id}</li>
+               <li class="list-group-item">
+                   Email: <a href="mailto:${team[i].email}">${team[i].email}</a> 
+                </li>
                <li class="list-group-item">${thirdItem}</li>
            </ul>
        </div>`;
@@ -241,8 +234,6 @@ function generateHtml() {
 function buildTeam() {
     generateHtml();
     fs.writeFileSync('./dist/index.html', html, 'UTF-8')
-
-
 }
 
 // Function call to initialize the app
