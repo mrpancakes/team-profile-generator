@@ -6,6 +6,7 @@ const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 
 let team = [];
+let html = '';
 
 function getManager() {
     console.log("Let's build your team!")
@@ -147,10 +148,6 @@ function additionalTeamMember() {
         });
 };
 
-let html = '';
-
-
-
 function generateHtml() {
 
     function getCardHtml() {
@@ -159,23 +156,27 @@ function generateHtml() {
         for (let i = 0; i < team.length; i++) {
             let role = team[i].getRole();
             let thirdItem = ''
+            let icon = ''
 
             switch (role) {
                 case 'Manager':
-                    thirdItem = `Office Number: ${team[i].officeNumber}`
+                    icon = '<i class="fas fa-mug-hot"></i>'
+                    thirdItem = `Office Number: ${team[i].officeNumber}`;
                     break;
                 case 'Engineer':
-                    thirdItem = `GitHub: <a href="https://github.com/${team[i].github}" target="_blank">${team[i].github}</a>`
+                    icon = '<i class="fas fa-glasses"></i>'
+                    thirdItem = `GitHub: <a href="https://github.com/${team[i].github}" target="_blank">${team[i].github}</a>`;
                     break;
                 case 'Intern':
-                    thirdItem = `School: ${team[i].school}`
+                    icon = '<i class="fas fa-user-graduate"></i>'
+                    thirdItem = `School: ${team[i].school}`;
                     break;
             };
 
             let newCard = `<div class="card" style="width: 18rem;">
-           <div class="card-body bg-primary text-white">
+           <div class="card-body text-white" id="${role}">
                <h5 class="card-title">${team[i].name}</h5>
-               <h6 class="card-text">${role}</h6>
+               <h6 class="card-text">${icon} ${role}</h6>
            </div>
            <ul class="list-group list-group-flush">
                <li class="list-group-item">ID: ${team[i].id}</li>
@@ -200,7 +201,10 @@ function generateHtml() {
         <!-- Bootstrap -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
         <!-- My CSS -->
         <link rel="stylesheet" href="./style.css">
         <title>Team Profile</title>
