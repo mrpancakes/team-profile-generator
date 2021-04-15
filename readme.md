@@ -34,7 +34,7 @@ Intern questions:
 * School
 
 
-Once the user has completed all questions, an index.html file will be generated in the /dist folder.
+Once the user has completed all questions and elects to finish, an index.html file will be generated in the /dist folder.
 
 ## How To Use
 
@@ -46,9 +46,10 @@ Below is an overview of how to use this application:
 
 ## More Info
 
-You can watch a video demonstration of me running the app [here](https://www.youtube.com/watch?v=3uH9FdJJJok). A sample generated readme can be found in the /output folder in the repo.
+You can watch a video demonstration of me running the app [here](https://www.youtube.com/watch?v=AFj_vAdGWks). A sample generated readme can be found in the /output folder in the repo.
 
-![Portfolio Preview](./images/application-screenshot.png)
+![Terminal Preview](./images/terminal-screenshot.png)
+![Application Preview](./images/rendered-html.png)
 
 
 
