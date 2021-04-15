@@ -46,7 +46,7 @@ Below is an overview of how to use this application:
 
 ## More Info
 
-You can watch a video demonstration of me running the app [here](https://www.youtube.com/watch?v=AFj_vAdGWks). A sample generated readme can be found in the /output folder in the repo.
+You can watch a video demonstration of me running the app [here](https://www.youtube.com/watch?v=AFj_vAdGWks). A sample generated html can be found in the /dist folder in the repo.
 
 ![Terminal Preview](./images/terminal-screenshot.png)
 ![Application Preview](./images/rendered-html.png)
